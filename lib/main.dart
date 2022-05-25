@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, unnecessary_import
+// ignore_for_file: prefer_const_constructors, unnecessary_import, deprecated_member_use
 
 import 'package:app_receitas/Screens/categories_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -13,7 +13,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Vamos Cozinhar?',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple,
+        accentColor: Colors.deepOrangeAccent,
+        fontFamily: 'Raleway',
+        canvasColor: Color.fromRGBO(255, 254, 229, 1),
+        textTheme: ThemeData.light().textTheme.copyWith(
+          headline6: TextStyle(
+            fontSize: 20,
+            fontFamily: 'RobotoCondensed'
+          )
+        )
       ),
       home: CategoriesScreen(),
     );
