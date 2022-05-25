@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_import
 
+import 'package:app_receitas/Screens/categories_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: CategoriesScreen(),
     );
   }
 }
