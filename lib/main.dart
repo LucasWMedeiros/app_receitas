@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_import, deprecated_member_use
 
 import 'package:app_receitas/Screens/categories_screen.dart';
+import 'package:app_receitas/Screens/categoris_meals_screen.dart';
+import 'package:app_receitas/utils/app_routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,15 +18,18 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         accentColor: Colors.deepOrangeAccent,
         fontFamily: 'Raleway',
-        canvasColor: Color.fromRGBO(255, 254, 229, 1),
+        canvasColor: Color.fromARGB(255, 234, 234, 207),
         textTheme: ThemeData.light().textTheme.copyWith(
           headline6: TextStyle(
             fontSize: 20,
-            fontFamily: 'RobotoCondensed'
+            fontFamily: 'RobotoCondensed',
           )
         )
       ),
-      home: CategoriesScreen(),
+      routes: {
+        AppRoutes.HOME: (ctx) => CategoriesScreen(),
+        AppRoutes.CATEGORY_MEALS: (ctx) => CategoriesMealsScrean()
+      },
     );
   }
 }

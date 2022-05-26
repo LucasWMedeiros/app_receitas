@@ -5,12 +5,12 @@ import 'package:app_receitas/Data/dummy_data.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Vamos Cozinhar?'),
+        centerTitle: true,
       ),
       body: GridView(
         padding: const EdgeInsets.all(25),
