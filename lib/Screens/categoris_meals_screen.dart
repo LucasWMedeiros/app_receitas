@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 
+import 'package:app_receitas/Components/meal_item.dart';
 import 'package:app_receitas/Data/dummy_data.dart';
 import 'package:app_receitas/models/category.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,7 @@ class CategoriesMealsScrean extends StatelessWidget {
         child: ListView.builder(
           itemCount: categoryMeals.length,
           itemBuilder: ((ctx, index) {
-            return Text(categoryMeals[index].title!);
+            return MealItem(categoryMeals[index]);
           })),
       ),
     );
