@@ -2,6 +2,7 @@
 
 import 'package:app_receitas/Screens/categories_screen.dart';
 import 'package:app_receitas/Screens/categoris_meals_screen.dart';
+import 'package:app_receitas/Screens/meal_detail_screen.dart';
 import 'package:app_receitas/utils/app_routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         AppRoutes.HOME: (ctx) => CategoriesScreen(),
-        AppRoutes.CATEGORY_MEALS: (ctx) => CategoriesMealsScrean()
+        AppRoutes.CATEGORY_MEALS: (ctx) => CategoriesMealsScrean(),
+        AppRoutes.MEAL_DETAIL: (ctx) => MealDetailScreen(),
       },
     );
   }
