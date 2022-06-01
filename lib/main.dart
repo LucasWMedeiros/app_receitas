@@ -3,6 +3,7 @@
 import 'package:app_receitas/Screens/categories_screen.dart';
 import 'package:app_receitas/Screens/categoris_meals_screen.dart';
 import 'package:app_receitas/Screens/meal_detail_screen.dart';
+import 'package:app_receitas/Screens/settings_screen.dart';
 import 'package:app_receitas/Screens/tabs_screen.dart';
 import 'package:app_receitas/utils/app_routes.dart';
 import 'package:flutter/cupertino.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.HOME: (ctx) => TabsScreen(),
         AppRoutes.CATEGORY_MEALS: (ctx) => CategoriesMealsScrean(),
         AppRoutes.MEAL_DETAIL: (ctx) => MealDetailScreen(),
+        AppRoutes.SETTINGS: (ctx) => SettingsScreen()
       },
     );
   }
