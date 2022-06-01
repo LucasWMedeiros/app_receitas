@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
+import 'package:app_receitas/Components/main_drawer.dart';
 import 'package:app_receitas/Screens/categories_screen.dart';
 import 'package:app_receitas/Screens/favorite_screen.dart';
 import 'package:flutter/material.dart';
@@ -36,6 +37,7 @@ class _TabsScreenState extends State<TabsScreen> {
         title: Text(_title[_seletedScreenIndex]),
         centerTitle: true,
       ),
+      drawer: MainDrawer(),
       body: _screens[_seletedScreenIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectScreen,
