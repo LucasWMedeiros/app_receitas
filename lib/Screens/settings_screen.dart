@@ -5,6 +5,11 @@ import 'package:app_receitas/models/settings.dart';
 import 'package:flutter/material.dart';
 
 class SettingsScreen extends StatefulWidget {
+
+  final Function(Settings) onSettingsChanged;
+
+  const SettingsScreen(this.onSettingsChanged);
+
   @override
   State<SettingsScreen> createState() => _SettingsScreenState();
 }
@@ -23,7 +28,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
         title: Text(title),
         subtitle: Text(subtitle),
         value: value,
-        onChanged: onChanged);
+        onChanged: (value) {
+          onChanged(value);
+          widget.onSettingsChanged(settings);
+  });
   }
 
   @override
