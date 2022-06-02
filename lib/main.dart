@@ -1,10 +1,12 @@
-// ignore_for_file: prefer_const_constructors, unnecessary_import, deprecated_member_use
+// ignore_for_file: prefer_const_constructors, unnecessary_import, deprecated_member_use, prefer_final_fields
 
+import 'package:app_receitas/Data/dummy_data.dart';
 import 'package:app_receitas/Screens/categories_screen.dart';
 import 'package:app_receitas/Screens/categoris_meals_screen.dart';
 import 'package:app_receitas/Screens/meal_detail_screen.dart';
 import 'package:app_receitas/Screens/settings_screen.dart';
 import 'package:app_receitas/Screens/tabs_screen.dart';
+import 'package:app_receitas/models/meal.dart';
 import 'package:app_receitas/utils/app_routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +14,8 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+
+  List<Meal> _availableMeals = DUMMY_MEALS;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +35,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         AppRoutes.HOME: (ctx) => TabsScreen(),
-        AppRoutes.CATEGORY_MEALS: (ctx) => CategoriesMealsScrean(),
+        AppRoutes.CATEGORY_MEALS: (ctx) => CategoriesMealsScrean(_availableMeals),
         AppRoutes.MEAL_DETAIL: (ctx) => MealDetailScreen(),
         AppRoutes.SETTINGS: (ctx) => SettingsScreen()
       },

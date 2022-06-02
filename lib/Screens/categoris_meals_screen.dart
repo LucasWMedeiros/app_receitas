@@ -3,9 +3,14 @@
 import 'package:app_receitas/Components/meal_item.dart';
 import 'package:app_receitas/Data/dummy_data.dart';
 import 'package:app_receitas/models/category.dart';
+import 'package:app_receitas/models/meal.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesMealsScrean extends StatelessWidget {
+
+  final List<Meal> meals;
+
+  const CategoriesMealsScrean(this.meals);
 
   @override
   Widget build(BuildContext context) {
